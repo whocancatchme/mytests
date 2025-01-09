@@ -1,17 +1,0 @@
-﻿Unified Kill Chain goals:,,,
-,,,
-,Initial Foothold,Network Propagation,Action on Objectives
-Assets impacted,Low value.,Medium value.,High value.
-,,,
-,"Typically, this involves edge devices, public-facing servers, or user workstations. Because of their position in modern architectures, these devices are typically untrusted by default.","Some internal systems. Typically at this phase, the threat actor has access to some member servers within the environment and has a reliable C2 channel established.","Critical servers such as Active Directory domain controllers, backup servers, or file servers."
-Threat actor’s degree of control,Low.,Medium.,High.
-,,,
-,"The threat actor has unreliable access to a system or is attempting to obtain access to a system, typically through phishing or attacking publicly facing services. Typically, this phase is the best opportunity for defenders to remove a threat.","The threat actor has enough control to traverse the network, but not enough control to execute objectives. At this point, threat actors typically have some credentials and have a reliable C2 channel established.","The threat actor is fully comfortable operating in the environment. They found all the resources needed to execute their objectives. At this point, they likely have the highest level of privileges available in the environment."
-Data requirement for investigation,Relatively low.,Significant.,High.
-,,,
-,"Typically, impact at this phase is limited to a small number of assets. Once identified at this phase, the data required for fully scoping the event is limited to a single host.","The capability to traverse the internal network typically indicates the presence of a reliable C2 channel. A higher volume of historic and real-time data is required to identify impacted assets. At this point, incident responders will need to have visibility of all connected assets to fully track lateral movement.","Investigators will require access to historical and real-time data from all connected assets. Additionally, in cases where data exfiltration is an objective, telemetry for the access and movement of data will also be required. This data is difficult to collect and is not typically tracked."
-Effort required to remediate,Low.,Medium.,High.
-,,,
-,"Activities at this phase typically occur on edge devices or public-facing assets. The typical posture is to treat these assets as untrusted, so it is common for environments to have capabilities for rapidly isolating these assets.","Traversing the network requires more investigative work to identify the individual assets that were accessed, the degree to which they were utilized, and the requirements for remediating.","In nearly every case, this requires rebuilding critical infrastructure. Often, this needs to occur with the added pressure of returning the business to a minimally operational state, to minimize losses."
-,,,
-,,,
